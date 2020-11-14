@@ -15,9 +15,3 @@ services:
       MYSQL_ROOT_PASSWORD: "password"
       MYSQL_DATABASE: "deliveries"
       MARIADB_ROOT_PASSWORD: "password"
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-    - 8081:8081
