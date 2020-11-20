@@ -12,6 +12,7 @@ services:
     ports:
     - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: "password"
-      MYSQL_DATABASE: "deliveries"
-      MARIADB_ROOT_PASSWORD: "password"
+     - MYSQL_ROOT_USER=root
+     - MARIADB_ROOT_PASSWORD=password
+     - MYSQL_ROOT_PASSWORD=password
+     - MYSQL_DATABASE=deliveries
