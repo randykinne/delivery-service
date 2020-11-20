@@ -9,21 +9,22 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
+@WebMvcTest
 @AutoConfigureMockMvc
 public class IndexControllerTests {
 
 	@Autowired
 	private MockMvc mockMvc;
 
-	@Test
-	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
+    @Test
+    public void indexShouldReturnDefaultMessage() throws Exception {
 
-		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(jsonPath("$.message").value("Welcome to delivery-service"));
-	}
-
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.message").value("Welcome to delivery-service"));
+    }
 }
