@@ -1,25 +1,43 @@
 package dev.randykinne.restservice.model;
 
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "deliveries")
 public class Delivery {
 
-	private int id;
-	private final String name;
-	private final String address;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String name;
+	private String address;
 
-	public Delivery(int id, String name, String address) {
-		this.id = id;
-		this.name = name;
-		this.address = address;
+	public Delivery() {
+		// Empty as Hibernate annotations use getters and setters instead
 	}
 
-	public int getID() {
+	public Integer getId() {
 		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {
 		return this.name;
 	}
 
-	public String getAddress() { return this.address; }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 }
