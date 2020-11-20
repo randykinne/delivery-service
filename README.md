@@ -25,10 +25,15 @@ The API can be called at `localhost:8080/api/v1/deliveries`
 Endpoints:
 
 `GET /` - Returns a default message
+
 `GET /api/v1/deliveries` - returns all deliveries
+
 `POST /api/v1/deliveries` creates a delivery with a JSON body with `name` and `address` fields
+
 `GET /api/v1/deliveries/{id}` - returns a delivery by ID
+
 `POST /api/v1/deliveries/{id}` - updates an existing delivery with that ID
+
 `DELETE /api/v1/deliveries/{id}` - deletes a delivery by ID
 
 # Improvements / TODO
