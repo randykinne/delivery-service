@@ -40,4 +40,11 @@ public class Delivery {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	public String toJSON() {
+		return "{ \"id\":\"" + getId() +
+				"\", \"name\":\"" + getName() +
+				"\", \"address\":\"" + getAddress() +
+				"\" }";
+	}
 }
