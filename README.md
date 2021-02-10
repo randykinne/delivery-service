@@ -36,11 +36,3 @@ Endpoints:
 
 `DELETE /api/v1/deliveries/{id}` - deletes a delivery by ID
 
-# Improvements / TODO
-- Paginate or filter `GET /api/v1/deliveries` results by query so the client doesn't get ALL data
-- Add more input validation in endpoints that utilize specific IDs
-- Add more specific responses for invalid input (4XX response codes)
-- Complete API test coverage, add integration tests with the data persistence layer
-- Add prometheus metrics endpoint and add prometheus and grafana to docker-compose for APM and observability
-
-
