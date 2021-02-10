@@ -1,6 +1,6 @@
-# delivery-service
+# springboot-rest-api-example
 
-This is an app to test building a REST API with spring
+This is an project to showcase building a REST API with spring
 
 You can build with maven or gradle within IntelliJ by using the `pom.xml`
 or by using the standard maven commands:
